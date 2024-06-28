@@ -1,22 +1,24 @@
-name: 01 - Building Blocks
+name: 01-Building Blocks
 
-on: push
+on: 
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
 
 jobs:
   echo-hello:
     runs-on: ubuntu-latest
     steps:
-      -name: Say hello
-       run: echo "Hello, world!"
+      - name: Say hello
+        run: echo "Hello, world!"
+
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
-      -name: Failed step
-       run:
-        echo "I will fail"
-        exit 1
-      -name: Say goodbye
-       run: echo "Goodbye!"
-        
+      - name: Failed step
+        run: |
+          echo "I will fail"
+          exit 1
       
-
+      - name: Say goodbye
+        run: echo "Goodbye!"
