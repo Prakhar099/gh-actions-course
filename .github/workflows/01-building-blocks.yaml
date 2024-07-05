@@ -1,6 +1,6 @@
 name: 01-building-blocks #Namen the work flow
 
-on: push  #Add the following triggers to your workflow
+on: workflow_dispatch  #Add the following triggers to your workflow
     
 jobs:
   echo-hello: #First job Add two jobs to the workflow
