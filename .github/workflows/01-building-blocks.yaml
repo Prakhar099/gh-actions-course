@@ -12,7 +12,7 @@ jobs:
   echo-goodbye: #Second Job 
     runs-on: ubuntu-latest
     steps:
-      - name: Failed step #First steps
+      - name: Successful step #First steps
         run: |
           echo "I will fail"
           exit 1
