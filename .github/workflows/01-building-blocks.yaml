@@ -1,23 +1,23 @@
-name: 01-Building Blocks
+name: 01-Building Blocks #Namen the work flow
 
-on: push
+on: push  #Add the following triggers to your workflow
     
 jobs:
-  echo-hello:
+  echo-hello: #First job Add two jobs to the workflow
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
+      - name: Say hello # single step 
         run: echo "Hello, world!"
 
-  echo-goodbye:
+  echo-goodbye: #Second Job 
     runs-on: ubuntu-latest
     steps:
-      - name: Failed step
+      - name: Failed step #First steps
         run: |
           echo "I will fail"
           exit 1
       
-      - name: Say goodbye
+      - name: Say goodbye # Second steps 
         run: echo "Goodbye!"
 
 
