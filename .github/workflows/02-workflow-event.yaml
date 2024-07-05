@@ -3,11 +3,11 @@ name: 02 - workflow Events
 on: push
 
 jobs:
-    echo:
-        run-on: ubuntu-latest
-        steps:
-            - name: show the tigger
-              run: echo "I've been triggered by a(n) ${{github.event_name}}"
+  echo:
+    run-on: ubuntu-latest
+    steps:
+    - name: show the tigger
+      run: echo "I've been triggered by a(n) ${{github.event_name}}"
  
 
 
