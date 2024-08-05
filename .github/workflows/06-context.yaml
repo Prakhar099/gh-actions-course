@@ -11,9 +11,9 @@ on:
 
 jobs: 
   echo-data:
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
 
-    env:
+  env:
      MY_WORKFLOW_VAR: "workflow"
      MY_OVERWRITTEN_VAR: "workflow"
 
