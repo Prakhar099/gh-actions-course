@@ -9,6 +9,9 @@ on:
         type: boolean
         default: false
 
+env:
+  MY_WORKFLOW_VAR: 'workflow'
+  MY_OVERWRITTEN_VAR: 'workflow'
 jobs: 
   echo-data:
    runs-on: ubuntu-latest
