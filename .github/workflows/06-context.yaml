@@ -12,7 +12,12 @@ on:
 jobs: 
   echo-data:
     runs-on: ubuntu-latest
-    steps:
+
+    env:
+     MY_WORKFLOW_VAR: "workflow"
+     MY_OVERWRITTEN_VAR: "workflow"
+
+  steps:
       - name: Display information
         run: |
           echo "Event Name: ${{ github.event_name }}"
@@ -25,4 +30,10 @@ jobs:
       - name: Retrieve Variable
         run: |
           echo "Variable value: ${{ vars.MY_VAR }}"
+      - name: Print Env Variables
+        env:
+          MY_OVERWRITTEN_VAR: 'step'
+        run: |
+          echo "workflow env: ${{ env.MY_WORKFLOW }}"
+          echo "OverWritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
 
